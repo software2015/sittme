@@ -1,24 +1,14 @@
-# README
+# Sittme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Route to create babysitter
+Post first_name and last_name to localhost:3000/api/v1/babysitters. last_name is optional, first_name is requred.
 
-Things you may want to cover:
+### Route to pagination
+Get localhost:3000/api/v1/babysitters?end_cursor=50&direction=forward
+localhost:3000/api/v1/babysitters?start_cursor=50&direction=backward
 
-* Ruby version
+direction is the direction from cursor, it can be forward and backward.
+end_cursor is the id of the last babysitter in array of paginated babysitters
+start_cursor is the id of the first babysitter in array of paginated babysitters
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Use end_cursor with direction=forward and start_cursor with direction=backward
